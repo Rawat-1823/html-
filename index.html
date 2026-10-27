@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="A complete, beginner-friendly HTML revision course with lessons, quizzes, projects, and a safe code playground.">
+  <title>HTML Mastery — Complete HTML Revision</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236c63ff'/%3E%3Ctext x='10' y='44' font-size='34' fill='white' font-family='Arial' font-weight='bold'%3E%3C/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#dashboard" data-view="dashboard" aria-label="HTML Mastery home">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span><strong>HTML<span class="brand-accent">M</span></strong><small>LEARNING STUDIO</small></span>
+      </a>
+      <div class="sidebar-label">LEARN</div>
+      <nav class="side-nav">
+        <button class="nav-link active" data-view="dashboard"><span class="nav-icon">⌂</span>Dashboard</button>
+        <button class="nav-link" data-view="lessons"><span class="nav-icon">▤</span>All lessons <span class="nav-count" id="nav-lesson-count">22</span></button>
+        <button class="nav-link" data-view="playground"><span class="nav-icon">⌘</span>HTML playground</button>
+        <button class="nav-link" data-view="quizzes"><span class="nav-icon">◈</span>Quizzes</button>
+        <button class="nav-link" data-view="projects"><span class="nav-icon">▣</span>Projects</button>
+      </nav>
+      <div class="sidebar-label resource-label">YOUR TOOLKIT</div>
+      <nav class="side-nav">
+        <button class="nav-link" data-view="cheatsheet"><span class="nav-icon">▧</span>Cheat sheet</button>
+        <button class="nav-link" data-view="interview"><span class="nav-icon">☷</span>Interview Q&amp;A</button>
+        <button class="nav-link" data-view="glossary"><span class="nav-icon">Aa</span>Glossary</button>
+        <button class="nav-link" data-view="progress"><span class="nav-icon">◷</span>My progress</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip">
+          <span class="tip-icon">✦</span>
+          <strong>Small steps add up.</strong>
+          <p>One lesson today brings you closer to HTML confidence.</p>
+          <button class="text-button" data-view="lessons">Explore lessons <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="sidebar-meta"><span class="status-dot"></span> Your learning stays on this device</div>
+      </div>
+    </aside>
+
+    <div class="app-main">
+      <header class="topbar">
+        <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar"><span></span><span></span><span></span></button>
+        <div class="breadcrumb"><span>Learning space</span><span class="crumb-divider">/</span><strong id="breadcrumb-current">Dashboard</strong></div>
+        <div class="topbar-actions">
+          <form class="search-box" id="search-form" role="search">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <label class="visually-hidden" for="global-search">Search lessons and topics</label>
+            <input id="global-search" type="search" placeholder="Search lessons, topics..." autocomplete="off">
+            <kbd>⌘ K</kbd>
+          </form>
+          <button class="icon-button theme-toggle" id="theme-toggle" aria-label="Switch to light theme" title="Toggle color theme"><span aria-hidden="true">☼</span></button>
+          <div class="avatar" aria-label="Learner profile">L</div>
+        </div>
+      </header>
+      <main id="main-content" tabindex="-1">
+        <div id="app-view" aria-live="polite"></div>
+      </main>
+      <footer class="site-footer"><span>Made for curious minds.</span><span>HTML Mastery <span aria-hidden="true">·</span> Learn at your own pace</span></footer>
+    </div>
+  </div>
+  <div class="mobile-scrim" id="mobile-scrim" hidden></div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
